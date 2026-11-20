@@ -1,0 +1,126 @@
+.signup-page {
+	background: linear-gradient(135deg, #f5efe6 0%, #e8d9c5 100%);
+	color: #2f261f;
+	min-height: 100vh;
+}
+
+.signup-page nav {
+	align-items: center;
+	background-color: transparent;
+	color: #315847;
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem clamp(1rem, 5vw, 4rem);
+}
+
+.signup-page nav h1 {
+	font-size: 1.5rem;
+	margin: 0;
+}
+
+.signup-page nav ul {
+	display: flex;
+	gap: 1.25rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.signup-page nav a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.signup-page nav a:hover,
+.signup-page nav a:focus-visible {
+	text-decoration: underline;
+}
+
+.signup-container {
+	background-color: #fffaf3;
+	border-radius: 12px;
+	box-shadow: 0 16px 40px rgb(72 51 30 / 18%);
+	box-sizing: border-box;
+	margin: clamp(3rem, 10vh, 6rem) auto;
+	max-width: 28rem;
+	padding: 2.5rem;
+	width: calc(100% - 2rem);
+}
+
+.signup-container h2 {
+	color: #4d3b2a;
+	margin: 0 0 1.75rem;
+	text-align: center;
+}
+
+.signup-container .form-field {
+	margin-bottom: 1.25rem;
+}
+
+.signup-container label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 0.45rem;
+}
+
+.signup-container .input-with-icon {
+	background-color: #fff;
+	border: 1px solid #cbbba7;
+	border-radius: 6px;
+	padding: 0.65rem 0.75rem;
+}
+
+.signup-container .input-with-icon:focus-within {
+	border-color: #786547;
+	box-shadow: 0 0 0 3px rgb(120 101 71 / 18%);
+}
+
+.signup-container .input-icon {
+	color: #786547;
+}
+
+.signup-container input {
+	background: transparent;
+	border: 0;
+	box-sizing: border-box;
+	color: #3d5e4a;
+	font: inherit;
+	min-width: 0;
+	outline: 0;
+	width: 100%;
+}
+
+.signup-container button {
+	background-color: #315847;
+	border: 0;
+	border-radius: 6px;
+	color: #fffaf3;
+	cursor: pointer;
+	font: inherit;
+	font-weight: 600;
+	justify-content: center;
+	padding: 0.75rem 1rem;
+	width: 100%;
+}
+
+.signup-container button:hover,
+.signup-container button:focus-visible {
+	background-color: #254437;
+}
+
+@media (max-width: 30rem) {
+	.signup-page nav {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.signup-page nav ul {
+		flex-wrap: wrap;
+		gap: 0.75rem 1rem;
+	}
+
+	.signup-container {
+		padding: 1.5rem;
+	}
+}

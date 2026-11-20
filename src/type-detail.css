@@ -1,0 +1,111 @@
+.type-detail-page {
+    min-height: 100vh;
+    color: #17202a;
+    background-color: #f5f1e8;
+    background-image:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.82), transparent 45%),
+        radial-gradient(circle at 88% 12%, rgba(198, 125, 71, 0.18), transparent 28%),
+        radial-gradient(circle at 8% 88%, rgba(69, 106, 91, 0.16), transparent 32%);
+}
+
+.type-detail-page nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem clamp(1rem, 5vw, 4rem);
+    color: #315847;
+}
+
+.type-detail-page nav h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.type-detail-page nav ul {
+    display: flex;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.type-detail-page nav a,
+.type-back-link {
+    color: #315847;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.type-detail-page nav a:hover,
+.type-detail-page nav a:focus-visible,
+.type-back-link:hover,
+.type-back-link:focus-visible {
+    color: #b45f31;
+    text-decoration: underline;
+}
+
+.type-detail-content {
+    width: min(100% - 2rem, 900px);
+    margin: 0 auto;
+    padding: clamp(3rem, 10vh, 6rem) 0;
+}
+
+.type-detail-content h2 {
+    margin: 2.5rem 0 0;
+    color: #315847;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1;
+    text-align: center;
+}
+
+.type-detail-intro {
+    max-width: 42rem;
+    margin: 1.25rem auto 3rem;
+    color: #53605b;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.7;
+    text-align: center;
+}
+
+.type-highlights {
+    padding: clamp(1.5rem, 5vw, 3rem);
+    border-top: 4px solid #b45f31;
+    background-color: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 16px 32px rgba(23, 32, 42, 0.1);
+}
+
+.type-highlights h3 {
+    margin: 0;
+    color: #315847;
+    font-size: 1.5rem;
+}
+
+.type-highlights ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 0.75rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.type-highlights li {
+    padding: 1rem;
+    border-radius: 6px;
+    background: #f5f1e8;
+    color: #315847;
+    font-weight: 600;
+}
+
+@media (max-width: 30rem) {
+    .type-detail-page nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .type-detail-page nav ul {
+        flex-wrap: wrap;
+        gap: 0.75rem 1rem;
+    }
+}

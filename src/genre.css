@@ -1,0 +1,86 @@
+.genre-page {
+    min-height: 100vh;
+    color: #17202a;
+    background-color: #f5f1e8;
+    background-image:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.82), transparent 45%),
+        radial-gradient(circle at 88% 12%, rgba(198, 125, 71, 0.18), transparent 28%),
+        radial-gradient(circle at 8% 88%, rgba(69, 106, 91, 0.16), transparent 32%);
+}
+
+.genre-content {
+    width: min(100% - 2rem, 1000px);
+    margin: 0 auto;
+    padding: clamp(4rem, 12vh, 8rem) 0;
+}
+
+.genre-content h2 {
+    margin: 0;
+    color: #315847;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1;
+    text-align: center;
+}
+
+.genre-intro {
+    margin: 1.25rem auto 3rem;
+    color: #53605b;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.genre-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.genre-card {
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border-top: 4px solid #b45f31;
+    background-color: rgba(255, 255, 255, 0.68);
+    box-shadow: 0 16px 32px rgba(23, 32, 42, 0.1);
+}
+
+.genre-card h3 {
+    margin: 0 0 1.25rem;
+    color: #315847;
+    font-size: 1.4rem;
+}
+
+.genre-card ul {
+    display: grid;
+    gap: 0.8rem;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.genre-card a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem 0.25rem 0;
+    border-radius: 4px;
+    color: #315847;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.genre-card a:hover,
+.genre-card a:focus-visible {
+    background-color: rgba(180, 95, 49, 0.12);
+    color: #b45f31;
+    outline: none;
+    transform: translateX(0.35rem);
+}
+
+@media (max-width: 600px) {
+    .genre-content {
+        padding: 3.5rem 0;
+    }
+
+    .genre-grid {
+        grid-template-columns: 1fr;
+    }
+}

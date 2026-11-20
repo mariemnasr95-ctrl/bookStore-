@@ -1,0 +1,75 @@
+.science-fiction-page {
+	min-height: 100vh;
+	color: #17202a;
+	background-color: #edf3f1;
+	background-image:
+		linear-gradient(135deg, rgba(255, 255, 255, 0.86), transparent 45%),
+		radial-gradient(circle at 88% 12%, rgba(69, 106, 91, 0.18), transparent 28%),
+		radial-gradient(circle at 8% 88%, rgba(198, 125, 71, 0.16), transparent 32%);
+}
+
+.science-fiction-content {
+	width: min(100% - 2rem, 1100px);
+	margin: 0 auto;
+	padding: clamp(4rem, 12vh, 8rem) 0;
+	text-align: center;
+}
+
+.science-fiction-content h1 {
+	margin: 0;
+	color: #315847;
+	font-size: clamp(2.5rem, 8vw, 5rem);
+	line-height: 1;
+}
+
+.science-fiction-content > p {
+	max-width: 44rem;
+	margin: 1.25rem auto 3rem;
+	color: #53605b;
+	font-size: clamp(1rem, 2vw, 1.2rem);
+	line-height: 1.6;
+}
+
+.science-fiction-page .book-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 1.5rem;
+	text-align: left;
+}
+
+.science-fiction-page .book-card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	color: #315847;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.science-fiction-page .book-card img {
+	display: block;
+	aspect-ratio: 2 / 3;
+	width: 100%;
+	border: 8px solid #fff;
+	border-radius: 4px;
+	object-fit: cover;
+	box-shadow: 0 18px 40px rgba(23, 32, 42, 0.2);
+	transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.science-fiction-page .book-card:hover img,
+.science-fiction-page .book-card:focus-visible img {
+	transform: translateY(-4px) rotate(-1deg);
+	box-shadow: 0 24px 48px rgba(23, 32, 42, 0.26);
+}
+
+@media (max-width: 560px) {
+	.science-fiction-content {
+		padding: 3.5rem 0;
+	}
+
+	.science-fiction-page .book-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
+	}
+}
